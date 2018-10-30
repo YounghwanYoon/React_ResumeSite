@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Grid System</title>
+    <script src ="../js/list.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="../../dev/scss/mygrid.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo" style="justify-self: center ">
+                <i class="fas fa-laptop-code fa-3x"></i>
+            </div>
+            <nav class="mainNav">
+                <ul class="main-nav-list" >
+                    <li><a id = "home" onclick = "activeNaviButton(this)" href="mygrid.html">Home</a></li>
+                    <li><a id = "projects" onclick = "activeNaviButton(this)" href="projects.html">Projects</a></li>
+                    <li><a id = "resume" onclick = "activeNaviButton(this)" href="resume.html">Resume</a></li>
+                    <li><a id = "active" onclick = "activeNaviButton(this)" href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mainContent">
+            <form id="gform" name="gform" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSeFnfChxkMrp2a5iJAfiLDQi4LAOt7IrDc1_6OsV2XcQzaTFg/formResponse?"
+            onsubmit="submitted=true;">
+                <label for="entry.2005620554">Company Name</label><br>
+                <input type="text" name="entry.2005620554" id="entry.2005620554"><br>
+                <label for="entry.1045781291">Email</label><br>
+                <input type="text" name="entry.1045781291" id="entry.1045781291"><br>
+                <label for="entry.1166974658">Phone</label><br>
+                <input type="text" name="entry.1166974658" id="entry.1166974658"><br>
+                <label for="entry.839337160">Message</label><br>
+                <textarea name="entry.839337160" id="entry.839337160" rows="10" cols="50"></textarea><br>
+                <input type="submit" name="" value="submit">
+            </form>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none" onload="if(submitted==true){}"></iframe>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            var submitted = false; 
+        </script>
+        <script type="text/javascript">
+            $('#gform').on('submit',function(e){
+                $('#gform *').fadeOut(2000);
+                $('#gform').prepend('Your submission has been processed. Thank you for your input. I will getback to you asap.');
+            })        
+        </script>
+        </div>
+        <footer class= "mainFooter" style="align-self: flex-end">
+            <p>Click to <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a></p>
+        </footer>
+    </div>
+</body>
+</html>

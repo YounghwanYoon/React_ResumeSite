@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=devie-width, initial-scale=1" >
+    <title>Testing Grid System</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="../../dev/scss/mygrid.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo" style="justify-self: center ">
+                <i class="fas fa-laptop-code fa-3x"></i>
+            </div>
+            <nav class="mainNav">
+                <ul class="main-nav-list" >
+                    <li><a id = "home" onclick = "activeNaviButton(this)" href="mygrid.html">Home</a></li>
+                    <li><a id = "active" onclick = "activeNaviButton(this)" href="projects.html">Projects</a></li>
+                    <li><a id = "resume" onclick = "activeNaviButton(this)" href="resume.html">Resume</a></li>
+                    <li><a id = "contact" onclick = "activeNaviButton(this)" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mainContent"> 
+  
+            <div class="includedContent" id ="includedContent">
+                <script>
+                    var url="/src/js/include-html.js"
+                    $.getScript(url);
+                </script>
+            </div>
+        </div>
+        <footer class= "mainFooter" style="align-self: flex-end">
+                <p>Click to <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a></p>
+        </footer>
+    </div>
+</body>
+</html>
