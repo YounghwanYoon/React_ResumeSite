@@ -1,6 +1,6 @@
 import React from 'react';
 import selectPage from '../../actions/index';
-require('../../scss/mygrid.scss');
+require('../../../scss/mygrid.scss');
 
 const HomePage = () => (
     <div className="wrapper">

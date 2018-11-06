@@ -1,7 +1,9 @@
 import React from 'react';
 import UserList from '../../containers/project-list';
 import UserDetails from '../../containers/user-detail';
-require('../../scss/mygrid.scss');
+import selectPage from '../../actions/index';
+
+require('../../../scss/mygrid.scss');
 
 const Projects = () => (
     <div className="Wrapper">

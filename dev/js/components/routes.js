@@ -15,7 +15,7 @@ import Projects from './views/Projects';
 export default routes =>()=>{
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="/dev/js/components/Projects.js" component={Projects} />
-    <Route path="/dev/js/components/HomePage.js" component={HomePage} />
+    <Route path="./views/Projects.js" component={Projects} />
+    <Route path="./views/HomePage.js" component={HomePage} />
   </Route>
 };
